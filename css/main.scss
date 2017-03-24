@@ -1,0 +1,77 @@
+.flex-container {
+    max-width:960px;
+    width:100%;
+    display: flex;
+}
+@mixin flex($grow , $shrink , $wrap) {
+    @if $grow == 1 {
+
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+    } @else if $grow == 2 {
+
+        -webkit-flex-grow: 2;
+        flex-grow: 2;
+    } @else if $grow == 3 {
+
+        -webkit-flex-grow: 3;
+        flex-grow: 3;
+    } @else if $grow == 4 {
+
+        -webkit-flex-grow: 4;
+        flex-grow: 4;
+    } @else if $grow == 5 {
+
+        -webkit-flex-grow: 5;
+        flex-grow: 5;
+    }
+    @if $shrink == 1 {
+
+        -webkit-flex-shrink: 1;
+        flex-shrink: 1;
+    } @else if $shrink == 2 {
+
+        -webkit-flex-shrink: 2;
+        flex-shrink: 2;
+    } @else if $shrink == 3 {
+
+        -webkit-flex-shrink: 3;
+        flex-shrink: 3;
+    } @else if $shrink == 4 {
+
+        -webkit-flex-shrink: 4;
+        flex-shrink: 4;
+    } @else if $shrink == 5 {
+
+        -webkit-flex-shrink: 5;
+        flex-shrink: 5;
+    }
+    @if $wrap == wrap {
+
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    } @else if $wrap == nowrap {
+        -webkit-flex-wrap: nowrap;
+        flex-wrap:         nowrap;
+    } @else if $wrap == wrap-reverse {
+        -webkit-flex-wrap: wrap-reverse;
+        flex-wrap:         wrap-reverse;
+    }
+}
+
+.box {
+    display: flex;
+    @include flex(3 , 0 , wrap-reverse);
+    min-width:100px;
+    min-height:100px;
+    background-color: red;
+}
+.one {
+    background-color: red;
+}
+.two {
+    background-color: yellow;
+}
+.three {
+    background-color: green;
+}

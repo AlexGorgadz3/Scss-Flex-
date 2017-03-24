@@ -1,0 +1,25 @@
+.flex-container {
+  max-width: 960px;
+  width: 100%;
+  display: flex; }
+
+.box {
+  display: flex;
+  -webkit-flex-grow: 3;
+  flex-grow: 3;
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+  min-width: 100px;
+  min-height: 100px;
+  background-color: red; }
+
+.one {
+  background-color: red; }
+
+.two {
+  background-color: yellow; }
+
+.three {
+  background-color: green; }
+
+/*# sourceMappingURL=main.css.map */
